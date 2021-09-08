@@ -7,8 +7,8 @@ public class Shooting : MonoBehaviour
 
     public Transform firePoint;
     public GameObject bulletPrefab;
-
     public float bulletForce = 20f;
+    public float camShakeMagnitude, camShakeDuration;
 
     // Start is called before the first frame update
 
