@@ -12,4 +12,27 @@ public class CameraFollow : MonoBehaviour
     {
         transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
     }
+
+
+
+    public IEnumerator Shaking(float duration, float magnitude)
+    {
+        //Vector3 originalPos = cameraController.currCamOffset;
+        //fov = cameraController.cam.fieldOfView;
+        Vector3 originalPos = transform.localPosition;
+        float elapsed = 0.0f;
+        while (elapsed < duration)
+        {
+
+            float x = Random.Range(-1f, 1f) * magnitude;
+            float y = Random.Range(-1f, 1f) * magnitude;
+
+            transform.localPosition = new Vector3(x, y, originalPos.z);
+
+            elapsed += Time.deltaTime;
+
+            yield return null;
+        }
+        transform.localPosition = originalPos;
+    }
 }

@@ -7,6 +7,7 @@ public class Shooting : MonoBehaviour
 
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public GameObject muzzleFlash;
     public float bulletForce = 20f;
     public float camShakeMagnitude, camShakeDuration;
 
@@ -23,6 +24,7 @@ public class Shooting : MonoBehaviour
 
     void Shoot()
     {
+        Instantiate(muzzleFlash, firePoint.position, Quaternion.identity);
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
