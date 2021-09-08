@@ -5,11 +5,11 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
 
-    public Transform player;
-    public Vector3 offset;
+    public Transform target;
 
+    // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, offset.z); // Camera follows the player with specified offset position
+        transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
     }
 }
