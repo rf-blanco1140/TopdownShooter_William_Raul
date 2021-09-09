@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1293111739325591502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3852211166951701394}
+  m_Layer: 0
+  m_Name: GunPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3852211166951701394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293111739325591502}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.131, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5454166768026111436}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5454166768026111472
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,7 +42,8 @@ GameObject:
   - component: {fileID: 5454166768026111437}
   - component: {fileID: 5454166768026111475}
   - component: {fileID: 6319165835542816167}
-  - component: {fileID: 9093905604989905065}
+  - component: {fileID: 4813593523061613405}
+  - component: {fileID: 1267051388126493617}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Player
@@ -32,6 +63,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5454166768664471359}
+  - {fileID: 3852211166951701394}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -119,10 +151,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4498317f6ec50db4ba58b803ea96da03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 5454166768026111436}
-  bulletPrefab: {fileID: 634317247259227183, guid: cb5194ceb7c89c54db96c19163f5bd2c, type: 3}
+  firePoint: {fileID: 3852211166951701394}
+  bulletPrefab: {fileID: 634317247259227183, guid: a28adf6e15d9b6a47a65dab41b0eb79e, type: 3}
+  muzzleFlash: {fileID: 2826102850231336104, guid: 7f9294aa1f48d3340b873c8622674f57, type: 3}
   bulletForce: 20
---- !u!114 &9093905604989905065
+--- !u!114 &4813593523061613405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,10 +164,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 5454166768026111472}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ce17572f1bc1c04086976a07aa46f48, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d760d5d5bdf04242832a9bb43a827e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gm: {fileID: 0}
+--- !u!61 &1267051388126493617
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5454166768026111472}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &5454166768664471357
 GameObject:
   m_ObjectHideFlags: 0
