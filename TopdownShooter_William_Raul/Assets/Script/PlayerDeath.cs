@@ -13,9 +13,8 @@ public class PlayerDeath : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Bullet")
+        if (collision.collider.tag == "EnemyBullet")
         {
-            Debug.LogError("Bullet Collision");
             _gm.Respawn();
         }
     }
