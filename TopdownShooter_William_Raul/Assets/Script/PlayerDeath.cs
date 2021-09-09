@@ -32,8 +32,10 @@ public class PlayerDeath : MonoBehaviour
         StartCoroutine(_camShake.Shaking(_camShakeDuration, _camShakeMagnitude));
         yield return new WaitForSeconds(0.1f);
         _gm.Respawn();
-        yield return new WaitForSeconds(2f);
+        _spriteColor.PlayInvulnerabilityFlash();
+        yield return new WaitForSeconds(1f);
         RestorePlayerVulnerability();
+        _spriteColor.StopInvulnerabilityFlash();
     }
 
     private void MakePlayerInvulnerable()
