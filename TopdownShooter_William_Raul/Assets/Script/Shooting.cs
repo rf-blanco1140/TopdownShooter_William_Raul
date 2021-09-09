@@ -14,8 +14,6 @@ public class Shooting : MonoBehaviour
 
     public CameraFollow camShake;
 
-    // Start is called before the first frame update
-
     // Update is called once per frame
     void Update()
     {
@@ -34,5 +32,10 @@ public class Shooting : MonoBehaviour
 
 
         StartCoroutine(camShake.Shaking(camShakeDuration, camShakeMagnitude));
+    }
+
+    public CameraFollow GetCamShake()
+    {
+        return camShake;
     }
 }
