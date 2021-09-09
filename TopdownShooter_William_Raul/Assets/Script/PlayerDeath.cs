@@ -25,8 +25,21 @@ public class PlayerDeath : MonoBehaviour
 
     IEnumerator DeathProcess()
     {
+        MakePlayerInvulnerable();
         StartCoroutine(_camShake.Shaking(_camShakeDuration, _camShakeMagnitude));
         yield return new WaitForSeconds(0.1f);
         _gm.Respawn();
+        yield return new WaitForSeconds(2f);
+        RestorePlayerVulnerability();
+    }
+
+    private void MakePlayerInvulnerable()
+    {
+        GetComponent<CircleCollider2D>().enabled = false;
+    }
+
+    private void RestorePlayerVulnerability()
+    {
+        GetComponent<CircleCollider2D>().enabled = true;
     }
 }
