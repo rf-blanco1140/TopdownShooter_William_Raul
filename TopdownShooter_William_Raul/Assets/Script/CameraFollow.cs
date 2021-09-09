@@ -6,11 +6,13 @@ public class CameraFollow : MonoBehaviour
 {
 
     public Transform target;
+    Vector3 originalPos;
 
     // Update is called once per frame
     void Update()
     {
         transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
+        originalPos = transform.position;
     }
 
 
@@ -19,7 +21,7 @@ public class CameraFollow : MonoBehaviour
     {
         //Vector3 originalPos = cameraController.currCamOffset;
         //fov = cameraController.cam.fieldOfView;
-        Vector3 originalPos = transform.localPosition;
+
         float elapsed = 0.0f;
         while (elapsed < duration)
         {
@@ -27,7 +29,7 @@ public class CameraFollow : MonoBehaviour
             float x = Random.Range(-1f, 1f) * magnitude;
             float y = Random.Range(-1f, 1f) * magnitude;
 
-            transform.localPosition = new Vector3(x, y, originalPos.z);
+            transform.localPosition = new Vector3(originalPos.x - x, originalPos.y - y, originalPos.z);
 
             elapsed += Time.deltaTime;
 

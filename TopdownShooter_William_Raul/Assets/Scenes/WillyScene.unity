@@ -289,6 +289,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5454166768026111439, guid: 6cccbda3509a83843a8c155f1d796092, type: 3}
+      propertyPath: camShake
+      value: 
+      objectReference: {fileID: 1945352193}
+    - target: {fileID: 5454166768026111439, guid: 6cccbda3509a83843a8c155f1d796092, type: 3}
       propertyPath: muzzleFlash
       value: 
       objectReference: {fileID: 2826102850231336104, guid: 7f9294aa1f48d3340b873c8622674f57, type: 3}
