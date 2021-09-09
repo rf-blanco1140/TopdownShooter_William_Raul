@@ -19,9 +19,6 @@ public class CameraFollow : MonoBehaviour
 
     public IEnumerator Shaking(float duration, float magnitude)
     {
-        //Vector3 originalPos = cameraController.currCamOffset;
-        //fov = cameraController.cam.fieldOfView;
-
         float elapsed = 0.0f;
         while (elapsed < duration)
         {
