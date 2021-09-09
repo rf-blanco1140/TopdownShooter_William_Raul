@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerDeath : MonoBehaviour
 {
     private GameManager _gm;
+    private SpriteColor _spriteColor;
     private CameraFollow _camShake;
 
     [SerializeField] private float _camShakeMagnitude, _camShakeDuration;
@@ -12,6 +13,7 @@ public class PlayerDeath : MonoBehaviour
     private void Start()
     {
         _gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        _spriteColor = GetComponent<SpriteColor>();
         _camShake = GetComponent<Shooting>().GetCamShake();
     }
 
@@ -26,6 +28,7 @@ public class PlayerDeath : MonoBehaviour
     IEnumerator DeathProcess()
     {
         MakePlayerInvulnerable();
+        _spriteColor.PlaySpriteDamageFlash();
         StartCoroutine(_camShake.Shaking(_camShakeDuration, _camShakeMagnitude));
         yield return new WaitForSeconds(0.1f);
         _gm.Respawn();
