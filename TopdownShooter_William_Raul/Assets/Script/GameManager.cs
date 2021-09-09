@@ -18,14 +18,14 @@ public class GameManager : MonoBehaviour
     {
         if(Input.GetButtonDown("Jump"))
         {
-            KillPlayer();
+            Respawn();
         }
     }
 
     /**
      * This method is only for testing purposes
      */
-    public void KillPlayer()
+    public void Respawn()
     {
         _player.transform.position = LastCheckPoint;
     }
