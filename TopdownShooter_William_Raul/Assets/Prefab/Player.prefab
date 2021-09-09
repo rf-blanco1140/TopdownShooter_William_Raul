@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 5454166768026111474}
   - component: {fileID: 5454166768026111475}
   - component: {fileID: 5454166768026111439}
-  - component: {fileID: 1284650915}
+  - component: {fileID: 781194612}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -168,12 +168,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1114791131}
   bulletPrefab: {fileID: 634317247259227183, guid: cb5194ceb7c89c54db96c19163f5bd2c, type: 3}
-  camShake: {fileID: 0}
+  muzzleFlash: {fileID: 2826102850231336104, guid: 7f9294aa1f48d3340b873c8622674f57, type: 3}
   bulletForce: 20
   camShakeMagnitude: 0.1
   camShakeDuration: 0.2
---- !u!61 &1284650915
-BoxCollider2D:
+  camShake: {fileID: 0}
+--- !u!58 &781194612
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -186,18 +187,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!1 &5454166768664471357
 GameObject:
   m_ObjectHideFlags: 0
