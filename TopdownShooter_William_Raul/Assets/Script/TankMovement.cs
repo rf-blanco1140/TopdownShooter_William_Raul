@@ -9,8 +9,6 @@ public class TankMovement : MonoBehaviour
     public GameObject moveEffect;
     public Rigidbody2D rb;
 
-    public float velFloat;
-
     // Update is called once per frame
     void Update()
     {
