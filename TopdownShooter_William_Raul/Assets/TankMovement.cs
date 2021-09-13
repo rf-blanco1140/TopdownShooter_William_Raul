@@ -28,8 +28,9 @@ public class TankMovement : MonoBehaviour
         transform.Translate(movementDirection * moveSpeed * inputMagnitude * Time.deltaTime, Space.World);
     }
 
-    //private void FixedUpdate()
-    //{
-    //    rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
-    //}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        moveSpeed = 0;
+    }
 }
