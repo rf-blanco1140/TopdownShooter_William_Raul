@@ -6,7 +6,7 @@ public class PlayerDeath : MonoBehaviour
 {
     private GameManager _gm;
     private SpriteColor _spriteColor;
-    private CameraFollow _camShake;
+    public CameraFollow _camShake;
 
     [SerializeField] private float _camShakeMagnitude, _camShakeDuration;
 
@@ -14,7 +14,7 @@ public class PlayerDeath : MonoBehaviour
     {
         _gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         _spriteColor = GetComponent<SpriteColor>();
-        _camShake = GetComponent<Shooting>().GetCamShake();
+ //       _camShake = GetComponent<Shooting>().GetCamShake();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -40,11 +40,11 @@ public class PlayerDeath : MonoBehaviour
 
     private void MakePlayerInvulnerable()
     {
-        GetComponent<CircleCollider2D>().enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false;
     }
 
     private void RestorePlayerVulnerability()
     {
-        GetComponent<CircleCollider2D>().enabled = true;
+        GetComponent<BoxCollider2D>().enabled = true;
     }
 }
