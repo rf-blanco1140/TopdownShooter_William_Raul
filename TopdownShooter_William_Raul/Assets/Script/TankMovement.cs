@@ -9,24 +9,22 @@ public class TankMovement : MonoBehaviour
     public GameObject moveEffect;
     public Rigidbody2D rb;
 
+    public float velFloat;
+
     // Update is called once per frame
     void Update()
     {
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
 
-
-    }
-    void FixedUpdate()
-    {
-
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
-
-        Vector3 vel = rb.velocity;
-        if (vel.magnitude > 0)
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
             Instantiate(moveEffect, transform.position, Quaternion.identity);
         }
+    }
+    void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
     }
 }
 
