@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private PlayerMovement _player;
+    [SerializeField] private TankMovement _player;
 
     [SerializeField] private Vector3 _lastCheckPoint;
 
