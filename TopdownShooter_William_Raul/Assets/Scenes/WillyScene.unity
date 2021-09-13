@@ -235,6 +235,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3649061188193920197, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1165286366}
+    - target: {fileID: 3649061188193920197, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
+      propertyPath: moveSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3649061188193920197, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
+      propertyPath: moveEffect
+      value: 
+      objectReference: {fileID: 2826102850231336104, guid: 7f9294aa1f48d3340b873c8622674f57, type: 3}
     - target: {fileID: 3649061188193920199, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
       propertyPath: m_Name
       value: PlayerTank
@@ -242,6 +254,18 @@ PrefabInstance:
     - target: {fileID: 3649061188193920199, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488535942598698872, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488535942598698873, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488535942598698873, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
@@ -305,6 +329,11 @@ PrefabInstance:
 --- !u!1 &1165286364 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3649061188193920199, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
+  m_PrefabInstance: {fileID: 93046537}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1165286366 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 6488535942598698873, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
   m_PrefabInstance: {fileID: 93046537}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1165286367 stripped
@@ -404,7 +433,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.1715679, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
