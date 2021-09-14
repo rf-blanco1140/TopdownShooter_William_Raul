@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &106796503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 106796504}
+  m_Layer: 0
+  m_Name: Wheel1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &106796504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106796503}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.2730446, y: -0.4712594, z: 0}
+  m_LocalScale: {x: 0.82740784, y: 0.62007815, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3649061187717974475}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &113886612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 113886613}
+  m_Layer: 0
+  m_Name: Wheel2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &113886613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113886612}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.2730446, y: -0.4712594, z: 0}
+  m_LocalScale: {x: 0.82740784, y: 0.62007815, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3649061187717974475}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &571915345
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +318,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.2085937, y: 1.6127, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 106796504}
+  - {fileID: 113886613}
   m_Father: {fileID: 3649061188193920196}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -378,8 +440,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   moveEffect: {fileID: 2826102850231336104, guid: 7f9294aa1f48d3340b873c8622674f57, type: 3}
+  wheel1: {fileID: 106796504}
+  wheel2: {fileID: 113886613}
+  exhaustPort: {fileID: 0}
   rb: {fileID: 6488535942598698873}
-  velFloat: 2.95
 --- !u!50 &6488535942598698873
 Rigidbody2D:
   serializedVersion: 4
