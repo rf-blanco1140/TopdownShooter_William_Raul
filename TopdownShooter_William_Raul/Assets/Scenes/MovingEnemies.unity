@@ -399,7 +399,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2599942592240954415, guid: 576636ff0b6524d40b4ac4baecc2e196, type: 3}
     - target: {fileID: 8543524267959357064, guid: 168727630a90a074d990f8812dcb0fa4, type: 3}
+      propertyPath: _enemy
+      value: 
+      objectReference: {fileID: 2599942592240954415, guid: 576636ff0b6524d40b4ac4baecc2e196, type: 3}
+    - target: {fileID: 8543524267959357064, guid: 168727630a90a074d990f8812dcb0fa4, type: 3}
       propertyPath: spawnPos.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543524267959357064, guid: 168727630a90a074d990f8812dcb0fa4, type: 3}
+      propertyPath: _spawnPos.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8543524267959357064, guid: 168727630a90a074d990f8812dcb0fa4, type: 3}
@@ -412,6 +420,18 @@ PrefabInstance:
       objectReference: {fileID: 1846499258}
     - target: {fileID: 8543524267959357064, guid: 168727630a90a074d990f8812dcb0fa4, type: 3}
       propertyPath: spawnPos.Array.data[2]
+      value: 
+      objectReference: {fileID: 1786466861}
+    - target: {fileID: 8543524267959357064, guid: 168727630a90a074d990f8812dcb0fa4, type: 3}
+      propertyPath: _spawnPos.Array.data[0]
+      value: 
+      objectReference: {fileID: 2008187636}
+    - target: {fileID: 8543524267959357064, guid: 168727630a90a074d990f8812dcb0fa4, type: 3}
+      propertyPath: _spawnPos.Array.data[1]
+      value: 
+      objectReference: {fileID: 1846499258}
+    - target: {fileID: 8543524267959357064, guid: 168727630a90a074d990f8812dcb0fa4, type: 3}
+      propertyPath: _spawnPos.Array.data[2]
       value: 
       objectReference: {fileID: 1786466861}
     m_RemovedComponents: []

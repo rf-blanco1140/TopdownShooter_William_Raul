@@ -6,20 +6,20 @@ using Pathfinding;
 public class EnemySeekerAI : MonoBehaviour
 {
     private Transform target; 
-    [SerializeField] private float speed;
-    [SerializeField] private float nextWaypointDistance = 3f;
-    [SerializeField] private float rotationSpeed;
-    private Path path;
-    private int currentWaypoint = 0;
-    private bool reachEndOfPath = false;
-    private Seeker seeker;
-    private Rigidbody2D rb;
+    [SerializeField] private float _speed;
+    [SerializeField] private float _nextWaypointDistance = 1f;
+    [SerializeField] private float _rotationSpeed;
+    private Path _path;
+    private int _currentWaypoint = 0;
+    private bool _reachEndOfPath = false;
+    private Seeker _seeker;
+    private Rigidbody2D _rb;
     
     // Start is called before the first frame update
     void Start()
     {
-        seeker = GetComponent<Seeker>();
-        rb = GetComponent<Rigidbody2D>();
+        _seeker = GetComponent<Seeker>();
+        _rb = GetComponent<Rigidbody2D>();
         target = GameObject.Find("PlayerTank").transform;
 
         InvokeRepeating("UpdatePath", 0f, .5f);
@@ -27,9 +27,9 @@ public class EnemySeekerAI : MonoBehaviour
 
     private void UpdatePath()
     {
-        if(seeker.IsDone())
+        if(_seeker.IsDone())
         {
-            seeker.StartPath(rb.position, target.position, OnPathComplete);
+            _seeker.StartPath(_rb.position, target.position, OnPathComplete);
         }
     }
 
@@ -37,42 +37,42 @@ public class EnemySeekerAI : MonoBehaviour
     {
         if(!p.error)
         {
-            path = p;
-            currentWaypoint = 0;
+            _path = p;
+            _currentWaypoint = 0;
         }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(path ==null)
+        if(_path ==null)
         {
             return;
         }
 
-        if(currentWaypoint >= path.vectorPath.Count)
+        if(_currentWaypoint >= _path.vectorPath.Count)
         {
-            reachEndOfPath = true;
+            _reachEndOfPath = true;
             return;
         }
         else
         {
-            reachEndOfPath = false;
+            _reachEndOfPath = false;
         }
 
-        Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+        Vector2 direction = ((Vector2)_path.vectorPath[_currentWaypoint] - _rb.position).normalized;
         Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, direction);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed*Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, _rotationSpeed*Time.deltaTime);
 
-        Vector2 force = direction * speed * Time.deltaTime;
+        Vector2 force = direction * _speed * Time.deltaTime;
 
-        rb.AddForce(force);
+        _rb.AddForce(force);
 
-        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+        float distance = Vector2.Distance(_rb.position, _path.vectorPath[_currentWaypoint]);
 
-        if(distance < nextWaypointDistance)
+        if(distance < _nextWaypointDistance)
         {
-            currentWaypoint++;
+            _currentWaypoint++;
         }
     }
 }
