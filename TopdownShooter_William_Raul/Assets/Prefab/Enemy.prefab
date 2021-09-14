@@ -152,10 +152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4498317f6ec50db4ba58b803ea96da03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 3852211166951701394}
-  bulletPrefab: {fileID: 634317247259227183, guid: a28adf6e15d9b6a47a65dab41b0eb79e, type: 3}
-  muzzleFlash: {fileID: 2826102850231336104, guid: 7f9294aa1f48d3340b873c8622674f57, type: 3}
-  bulletForce: 20
+  _firePoint: {fileID: 3852211166951701394}
+  _bulletPrefab: {fileID: 634317247259227183, guid: a28adf6e15d9b6a47a65dab41b0eb79e, type: 3}
+  _muzzleFlash: {fileID: 2826102850231336104, guid: 7f9294aa1f48d3340b873c8622674f57, type: 3}
+  _bulletForce: 20
 --- !u!114 &4813593523061613405
 MonoBehaviour:
   m_ObjectHideFlags: 0
