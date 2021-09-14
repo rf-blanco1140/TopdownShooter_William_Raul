@@ -10,11 +10,11 @@ public class Shooting : MonoBehaviour
     public GameObject muzzleFlash;
     public float bulletForce = 20f;
     public float camShakeMagnitude, camShakeDuration;
-    public CameraFollow camShake;
+    private CameraFollow _camShake;
 
     private void Start()
     {
-        camShake = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
+        _camShake = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
     }
 
     // Update is called once per frame
@@ -34,11 +34,11 @@ public class Shooting : MonoBehaviour
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
 
 
-        StartCoroutine(camShake.Shaking(camShakeDuration, camShakeMagnitude));
+        StartCoroutine(_camShake.Shaking(camShakeDuration, camShakeMagnitude));
     }
 
     public CameraFollow GetCamShake()
     {
-        return camShake;
+        return _camShake;
     }
 }
