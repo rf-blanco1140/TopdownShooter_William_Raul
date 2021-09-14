@@ -6,13 +6,14 @@ public class PlayerDeath : MonoBehaviour
 {
     private GameManager _gm;
     private SpriteColor _spriteColor;
-    public CameraFollow _camShake;
+    private CameraFollow _camShake;
 
     [SerializeField] private float _camShakeMagnitude, _camShakeDuration;
 
     private void Start()
     {
         _gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        _camShake = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
         _spriteColor = GetComponent<SpriteColor>();
  //       _camShake = GetComponent<Shooting>().GetCamShake();
     }

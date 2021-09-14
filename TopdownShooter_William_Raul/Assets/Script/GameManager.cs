@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private TankMovement _player;
+    private TankMovement _player;
 
     [SerializeField] private Vector3 _lastCheckPoint;
+
+    private void Start()
+    {
+        _player = GameObject.Find("PlayerTank").GetComponent<TankMovement>();
+    }
 
     public Vector3 LastCheckPoint
     {

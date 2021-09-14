@@ -8,6 +8,11 @@ public class CameraFollow : MonoBehaviour
     public Transform target;
     Vector3 originalPos;
 
+    private void Start()
+    {
+        target = GameObject.Find("PlayerTank").GetComponent<Transform>();
+    }
+
     // Update is called once per frame
     void Update()
     {
