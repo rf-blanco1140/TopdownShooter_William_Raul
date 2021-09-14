@@ -5,7 +5,7 @@ using Pathfinding;
 
 public class EnemySeekerAI : MonoBehaviour
 {
-    [SerializeField] private Transform target; //TODO definir esto de manera dinamica cuando se hace spawn
+    private Transform target; 
     [SerializeField] private float speed;
     [SerializeField] private float nextWaypointDistance = 3f;
     [SerializeField] private float rotationSpeed;
