@@ -74,10 +74,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 046625d4b98553e4baafe7c90531de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 50
-  nextWaypointDistance: 1
-  rotationSpeed: 360
+  _speed: 50
+  _nextWaypointDistance: 1
+  _rotationSpeed: 360
 --- !u!50 &7960460908511359696
 Rigidbody2D:
   serializedVersion: 4

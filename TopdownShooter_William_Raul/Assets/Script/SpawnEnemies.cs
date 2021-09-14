@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour
 {
-    [SerializeField] GameObject enemy;
-    [SerializeField] List<Transform> spawnPos;
+    [SerializeField] private GameObject _enemy;
+    [SerializeField] private List<Transform> _spawnPos;
 
     private void Start()
     {
@@ -14,14 +14,14 @@ public class SpawnEnemies : MonoBehaviour
     
     private void SpawnEnemyAtLocation(Transform spawnTransform)
     {
-        Instantiate(enemy, spawnTransform.position,spawnTransform.rotation);
+        Instantiate(_enemy, spawnTransform.position,spawnTransform.rotation);
     }
 
     private void SpawnAllEnemies()
     {
-        for(int i=0;i<spawnPos.Count;i++)
+        for(int i=0;i<_spawnPos.Count;i++)
         {
-            SpawnEnemyAtLocation(spawnPos[i]);
+            SpawnEnemyAtLocation(_spawnPos[i]);
         }
     }
 }
