@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyDeath : MonoBehaviour
+public class DeathEnemyStandard : MonoBehaviour
 {
-    private SpriteColor _spriteColor;
+    private SpriteColor _spriteColorRef;
 
     private void Start()
     {
-        _spriteColor = GetComponent<SpriteColor>();
+        _spriteColorRef = GetComponent<SpriteColor>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -21,9 +21,8 @@ public class EnemyDeath : MonoBehaviour
 
     IEnumerator DeathProcess()
     {
-        _spriteColor.PlaySpriteDamageFlash();
+        _spriteColorRef.PlaySpriteDamageFlash();
         yield return new WaitForSeconds(0.5f);
         Destroy(this.gameObject);
     }
-
 }

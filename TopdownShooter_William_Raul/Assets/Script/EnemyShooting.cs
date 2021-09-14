@@ -8,6 +8,7 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private GameObject _muzzleFlash;
     [SerializeField] private float _bulletForce = 20f;
+    [SerializeField] private float _shootingFrequency;
 
     private void Start()
     {
@@ -27,7 +28,7 @@ public class EnemyShooting : MonoBehaviour
         while(true)
         {
             Shoot();
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(_shootingFrequency);
         }
     }
 }

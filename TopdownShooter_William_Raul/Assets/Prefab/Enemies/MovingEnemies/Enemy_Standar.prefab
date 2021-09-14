@@ -42,11 +42,11 @@ GameObject:
   - component: {fileID: 5454166768026111437}
   - component: {fileID: 5454166768026111475}
   - component: {fileID: 6319165835542816167}
-  - component: {fileID: 4813593523061613405}
   - component: {fileID: 1267051388126493617}
   - component: {fileID: 3922416674934810680}
+  - component: {fileID: 4368252236867710458}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy_Standar
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,18 +156,7 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 634317247259227183, guid: a28adf6e15d9b6a47a65dab41b0eb79e, type: 3}
   _muzzleFlash: {fileID: 2826102850231336104, guid: 7f9294aa1f48d3340b873c8622674f57, type: 3}
   _bulletForce: 20
---- !u!114 &4813593523061613405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5454166768026111472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d760d5d5bdf04242832a9bb43a827e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _shootingFrequency: 2
 --- !u!61 &1267051388126493617
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -204,6 +193,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96fc291d51aa7c54fa24220a60ddfe3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4368252236867710458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5454166768026111472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4854116c912c443816f7db34b835a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5454166768664471357
