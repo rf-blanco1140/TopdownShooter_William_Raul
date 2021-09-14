@@ -15,7 +15,7 @@ public class PlayerDeath : MonoBehaviour
         _gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         _camShake = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
         _spriteColor = GetComponent<SpriteColor>();
- //       _camShake = GetComponent<Shooting>().GetCamShake();
+        _camShake = GetComponentInChildren<Shooting>().GetCamShake();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

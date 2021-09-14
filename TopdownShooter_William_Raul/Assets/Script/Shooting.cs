@@ -10,9 +10,12 @@ public class Shooting : MonoBehaviour
     public GameObject muzzleFlash;
     public float bulletForce = 20f;
     public float camShakeMagnitude, camShakeDuration;
-
-
     public CameraFollow camShake;
+
+    private void Start()
+    {
+        camShake = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
+    }
 
     // Update is called once per frame
     void Update()
