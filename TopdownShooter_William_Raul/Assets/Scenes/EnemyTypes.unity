@@ -599,11 +599,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5454166768026111436, guid: a4899d3a1ff63844db791a6e6d1c8308, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.32
+      value: -9.16
       objectReference: {fileID: 0}
     - target: {fileID: 5454166768026111436, guid: a4899d3a1ff63844db791a6e6d1c8308, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.2584963
+      value: -3.67
       objectReference: {fileID: 0}
     - target: {fileID: 5454166768026111436, guid: a4899d3a1ff63844db791a6e6d1c8308, type: 3}
       propertyPath: m_LocalPosition.z
@@ -611,19 +611,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5454166768026111436, guid: a4899d3a1ff63844db791a6e6d1c8308, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.90762824
       objectReference: {fileID: 0}
     - target: {fileID: 5454166768026111436, guid: a4899d3a1ff63844db791a6e6d1c8308, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5454166768026111436, guid: a4899d3a1ff63844db791a6e6d1c8308, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5454166768026111436, guid: a4899d3a1ff63844db791a6e6d1c8308, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.41977492
       objectReference: {fileID: 0}
     - target: {fileID: 5454166768026111436, guid: a4899d3a1ff63844db791a6e6d1c8308, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -635,7 +635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5454166768026111436, guid: a4899d3a1ff63844db791a6e6d1c8308, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -49.641
       objectReference: {fileID: 0}
     - target: {fileID: 5454166768026111472, guid: a4899d3a1ff63844db791a6e6d1c8308, type: 3}
       propertyPath: m_Name
@@ -920,7 +920,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.8416696, g: 0.8738924, b: 0.9245283, a: 0}
+  m_BackGroundColor: {r: 0.41941082, g: 0.4928496, b: 0.6132076, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

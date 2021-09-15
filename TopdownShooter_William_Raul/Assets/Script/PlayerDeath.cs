@@ -18,12 +18,9 @@ public class PlayerDeath : MonoBehaviour
         _camShake = GetComponentInChildren<Shooting>().GetCamShake();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void StartDeathProcess()
     {
-        if (collision.collider.tag == "EnemyBullet")
-        {
-            StartCoroutine(DeathProcess());
-        }
+        StartCoroutine(DeathProcess());
     }
 
     IEnumerator DeathProcess()
