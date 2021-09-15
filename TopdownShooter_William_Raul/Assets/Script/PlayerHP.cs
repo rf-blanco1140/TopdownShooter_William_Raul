@@ -20,6 +20,7 @@ public class PlayerHP : MonoBehaviour
             if (_hp <= 0)
             {
                 _playerDeathRef.StartDeathProcess();
+                _hp = 3;
             }
         }
     }
