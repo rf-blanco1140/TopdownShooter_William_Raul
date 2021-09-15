@@ -236,7 +236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4761513206833488084, guid: 168727630a90a074d990f8812dcb0fa4, type: 3}
       propertyPath: m_Name
-      value: Spawner (1)
+      value: Spawner
       objectReference: {fileID: 0}
     - target: {fileID: 8543524267959357064, guid: 168727630a90a074d990f8812dcb0fa4, type: 3}
       propertyPath: _enemy

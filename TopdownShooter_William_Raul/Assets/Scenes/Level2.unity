@@ -1455,7 +1455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed909e36f766864fb43385f8624e694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lastCheckPoint: {x: 0, y: 0, z: 0}
+  _lastCheckPoint: {x: -0.19486076, y: -3.9750798, z: 0}
 --- !u!4 &1506043339
 Transform:
   m_ObjectHideFlags: 0

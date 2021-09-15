@@ -17,7 +17,7 @@ public class SpawnEnemies : MonoBehaviour
         Instantiate(_enemy, spawnTransform.position,spawnTransform.rotation);
     }
 
-    private void SpawnAllEnemies()
+    public void SpawnAllEnemies()
     {
         for(int i=0;i<_spawnPos.Count;i++)
         {
