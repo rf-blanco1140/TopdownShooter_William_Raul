@@ -6,6 +6,8 @@ public class Checkpoint : MonoBehaviour
 {
     private GameManager _gm;
     private bool _unused;
+    [SerializeField] List<SpawnEnemies> _roomEnemySpawners;
+    
 
     private void Start()
     {
@@ -25,6 +27,7 @@ public class Checkpoint : MonoBehaviour
         if(!_unused)
         {
             _unused = true;
+            _gm.SetCurrentEnemySpawnner(_roomEnemySpawners);
             _gm.SetCheckpoint(transform.position);
             pPlayerHP.RestoreOneHP();
         }

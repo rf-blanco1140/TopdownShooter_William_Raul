@@ -7,11 +7,6 @@ public class SpawnEnemies : MonoBehaviour
     [SerializeField] private GameObject _enemy;
     [SerializeField] private List<Transform> _spawnPos;
 
-    private void Start()
-    {
-        SpawnAllEnemies();
-    }
-    
     private void SpawnEnemyAtLocation(Transform spawnTransform)
     {
         Instantiate(_enemy, spawnTransform.position,spawnTransform.rotation);
