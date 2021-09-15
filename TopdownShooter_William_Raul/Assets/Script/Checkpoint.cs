@@ -5,6 +5,7 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     private GameManager _gm;
+    private bool _unused;
 
     private void Start()
     {
@@ -15,12 +16,17 @@ public class Checkpoint : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            SetCheckPoint();
+            SetCheckPoint(collision.gameObject.GetComponent<PlayerHP>());
         }
     }
 
-    public void SetCheckPoint()
+    public void SetCheckPoint(PlayerHP pPlayerHP)
     {
-        _gm.SetCheckpoint(transform.position);
+        if(!_unused)
+        {
+            _unused = true;
+            _gm.SetCheckpoint(transform.position);
+            pPlayerHP.RestoreOneHP();
+        }
     }
 }

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerHP : MonoBehaviour
 {
-    [SerializeField] private int _hp = 3;
+    [SerializeField] private int _currentHP = 3;
+    [SerializeField] private int _maxHP = 3;
     private PlayerDeath _playerDeathRef;
 
     private void Start()
@@ -17,17 +18,27 @@ public class PlayerHP : MonoBehaviour
         if (collision.collider.tag == "EnemyBullet")
         {
             ReceiveDamage();
-            if (_hp <= 0)
+            if (_currentHP <= 0)
             {
                 _playerDeathRef.StartDeathProcess();
-                _hp = 3;
+                _currentHP = 3;
+                Debug.Log("HP: " + _currentHP);//ONLY FOR TESTING
             }
         }
     }
 
     private void ReceiveDamage()
     {
-        _hp--;
-        Debug.Log("HP: "+_hp);//ONLY FOR TESTING
+        _currentHP--;
+        Debug.Log("HP: "+_currentHP);//ONLY FOR TESTING
+    }
+
+    public void RestoreOneHP()
+    {
+        if(_currentHP<_maxHP)
+        {
+            _currentHP++;
+            Debug.Log("HP: " + _currentHP);//ONLY FOR TESTING
+        }
     }
 }

@@ -29,9 +29,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    /**
-     * This method is only for testing purposes
-     */
     public void Respawn()
     {
         DestroyAllEnemies();
