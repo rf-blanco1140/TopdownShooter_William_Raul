@@ -313,8 +313,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 905586475}
   bulletPrefab: {fileID: 634317247259227183, guid: cb5194ceb7c89c54db96c19163f5bd2c, type: 3}
-  muzzleFlash: {fileID: 2826102850231336104, guid: 7f9294aa1f48d3340b873c8622674f57, type: 3}
-  bulletForce: 20
+  muzzleFlash: {fileID: 2826102850231336104, guid: d72c5b02db2f54a44aa3c477718925fe, type: 3}
+  bulletForce: 50
   shootCooldown: 1
   camShakeMagnitude: 0.1
   camShakeDuration: 0.1
