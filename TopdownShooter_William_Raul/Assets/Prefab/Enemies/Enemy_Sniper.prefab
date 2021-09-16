@@ -155,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _firePoint: {fileID: 3852211166951701394}
   _bulletPrefab: {fileID: 634317247259227183, guid: c4dbac89dc6e99d4f9fe5dcd96bf9bc3, type: 3}
-  _muzzleFlash: {fileID: 2826102850231336104, guid: 7f9294aa1f48d3340b873c8622674f57, type: 3}
+  _muzzleFlash: {fileID: 2826102850231336104, guid: d72c5b02db2f54a44aa3c477718925fe, type: 3}
   _bulletForce: 20
   _shootingFrequency: 0.7
 --- !u!61 &1267051388126493617
