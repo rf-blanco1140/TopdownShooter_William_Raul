@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 7223043349188175705}
   - component: {fileID: 7960460908511359696}
   - component: {fileID: 8862712967329949428}
-  - component: {fileID: 8189440500530255374}
   - component: {fileID: 649317241113079502}
   - component: {fileID: 4895956447363219605}
   - component: {fileID: 21308009268890138}
+  - component: {fileID: 9132310753236772256}
   - component: {fileID: 7938545187187349791}
   m_Layer: 0
   m_Name: HeavyEnemy
@@ -156,23 +156,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8189440500530255374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2599942592240954415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4498317f6ec50db4ba58b803ea96da03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _firePoint: {fileID: 1252308174115607482}
-  _bulletPrefab: {fileID: 634317247259227183, guid: 9532eb227d3f86345ae9724e654175d8, type: 3}
-  _muzzleFlash: {fileID: 2826102850231336104, guid: d72c5b02db2f54a44aa3c477718925fe, type: 3}
-  _bulletForce: 20
-  _shootingFrequency: 4
 --- !u!61 &649317241113079502
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -224,6 +207,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 3
+  _animator: {fileID: 7938545187187349791}
+--- !u!114 &9132310753236772256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2599942592240954415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e74a2661d31914e8cfd70f86263ff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _firePoint: {fileID: 1252308174115607482}
+  _bulletPrefab: {fileID: 634317247259227183, guid: 9532eb227d3f86345ae9724e654175d8, type: 3}
+  _muzzleFlash: {fileID: 2826102850231336104, guid: d72c5b02db2f54a44aa3c477718925fe, type: 3}
+  _bulletForce: 20
+  _shootingFrequency: 4
   _animator: {fileID: 7938545187187349791}
 --- !u!95 &7938545187187349791
 Animator:
