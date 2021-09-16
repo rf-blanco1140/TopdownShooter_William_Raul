@@ -316,7 +316,7 @@ MonoBehaviour:
   muzzleFlash: {fileID: 2826102850231336104, guid: d72c5b02db2f54a44aa3c477718925fe, type: 3}
   bulletForce: 50
   shootCooldown: 1
-  camShakeMagnitude: 0.1
+  camShakeMagnitude: 0.3
   camShakeDuration: 0.1
 --- !u!1 &905586474
 GameObject:
