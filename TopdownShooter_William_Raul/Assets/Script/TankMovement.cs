@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class TankMovement : MonoBehaviour
 {
+    //Movement
     public float moveSpeed = 5f;
     Vector2 movement;
-    public GameObject moveEffect;
+    public Rigidbody2D rb;
+
+    //Effects
     public Transform wheel1;
     public Transform wheel2;
     public Transform exhaustPort;
-    public Rigidbody2D rb;
+    public GameObject moveEffect;
 
     public float camShakeMagnitude, camShakeDuration;
-    private CameraFollow _camShake;
+    private CameraFollow camShake;
 
     // Update is called once per frame
     private void Start()
     {
-        _camShake = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
+        camShake = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
     }
 
     void Update()
@@ -38,7 +41,7 @@ public class TankMovement : MonoBehaviour
 
             if (!Input.GetMouseButtonDown(0))
             {
-                StartCoroutine(_camShake.Shaking(camShakeDuration, camShakeMagnitude));
+                StartCoroutine(camShake.Shaking(camShakeDuration, camShakeMagnitude));
             }
 
         }

@@ -315,6 +315,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 634317247259227183, guid: cb5194ceb7c89c54db96c19163f5bd2c, type: 3}
   muzzleFlash: {fileID: 2826102850231336104, guid: 7f9294aa1f48d3340b873c8622674f57, type: 3}
   bulletForce: 20
+  shootCooldown: 1
   camShakeMagnitude: 0.1
   camShakeDuration: 0.1
 --- !u!1 &905586474
@@ -709,11 +710,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  moveEffect: {fileID: 2826102850231336104, guid: 7f9294aa1f48d3340b873c8622674f57, type: 3}
+  rb: {fileID: 6488535942598698873}
   wheel1: {fileID: 106796504}
   wheel2: {fileID: 113886613}
   exhaustPort: {fileID: 0}
-  rb: {fileID: 6488535942598698873}
+  moveEffect: {fileID: 2826102850231336104, guid: 7f9294aa1f48d3340b873c8622674f57, type: 3}
   camShakeMagnitude: 0.05
   camShakeDuration: 0.1
 --- !u!50 &6488535942598698873
@@ -826,6 +827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98fda920de010154188522538aefa321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _roomEnemySpawners: []
 --- !u!114 &1165286370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -864,7 +866,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189b5ef07f4b8054a91d21812fc92500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 3
+  _currentHP: 3
+  _maxHP: 3
 --- !u!1 &4427438044060969226
 GameObject:
   m_ObjectHideFlags: 0
