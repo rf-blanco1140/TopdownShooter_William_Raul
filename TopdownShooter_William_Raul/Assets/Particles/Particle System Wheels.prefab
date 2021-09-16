@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1280564033757966360}
   - component: {fileID: 7862400788370477276}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Particle System Wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
