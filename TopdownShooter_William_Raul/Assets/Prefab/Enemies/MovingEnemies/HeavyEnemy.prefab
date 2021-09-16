@@ -16,8 +16,7 @@ GameObject:
   - component: {fileID: 8189440500530255374}
   - component: {fileID: 649317241113079502}
   - component: {fileID: 4895956447363219605}
-  - component: {fileID: 6137904440722846928}
-  - component: {fileID: 8587680947632715102}
+  - component: {fileID: 21308009268890138}
   - component: {fileID: 7938545187187349791}
   m_Layer: 0
   m_Name: HeavyEnemy
@@ -212,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96fc291d51aa7c54fa24220a60ddfe3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6137904440722846928
+--- !u!114 &21308009268890138
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -221,22 +220,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2599942592240954415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dd4ae77e4079694696cce1ea8341b23, type: 3}
+  m_Script: {fileID: 11500000, guid: 229b63621bb542d479323814c392a6f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 3
---- !u!114 &8587680947632715102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2599942592240954415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e4854116c912c443816f7db34b835a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _animator: {fileID: 7938545187187349791}
 --- !u!95 &7938545187187349791
 Animator:
   serializedVersion: 3
