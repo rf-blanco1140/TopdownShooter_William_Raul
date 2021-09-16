@@ -195,6 +195,14 @@ PrefabInstance:
       propertyPath: camShakeMagnitude
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 3649061187717974474, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3649061187717974516, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3649061188193920196, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -246,6 +254,22 @@ PrefabInstance:
     - target: {fileID: 3649061188193920199, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
       propertyPath: m_Name
       value: PlayerTank
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488535942598698872, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488535942598698872, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488535942598698872, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488535942598698873, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
@@ -340,6 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed909e36f766864fb43385f8624e694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _roomEnemySpawners: []
   _lastCheckPoint: {x: 0, y: 0, z: 0}
 --- !u!4 &1506043339
 Transform:
@@ -441,6 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98fda920de010154188522538aefa321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _roomEnemySpawners: []
 --- !u!4 &1710639069
 Transform:
   m_ObjectHideFlags: 0

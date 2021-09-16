@@ -5,12 +5,15 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     private CameraFollow _camShake;
+
     public Transform firePoint;
     public GameObject bulletPrefab;
     public GameObject muzzleFlash;
+
     public float bulletForce = 20f;
     public float shootCooldown = 1f;
     public float camShakeMagnitude, camShakeDuration;
+
     private bool _alreadyAttacked;
 
     private void Start()

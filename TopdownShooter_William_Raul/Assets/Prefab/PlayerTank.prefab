@@ -715,7 +715,7 @@ MonoBehaviour:
   wheel2: {fileID: 113886613}
   exhaustPort: {fileID: 0}
   moveEffect: {fileID: 2826102850231336104, guid: 7f9294aa1f48d3340b873c8622674f57, type: 3}
-  camShakeMagnitude: 0.05
+  camShakeMagnitude: 0.03
   camShakeDuration: 0.1
 --- !u!50 &6488535942598698873
 Rigidbody2D:
@@ -737,7 +737,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &6488535942598698872
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -751,7 +751,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.07, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -762,7 +762,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!212 &1165286372
 SpriteRenderer:
