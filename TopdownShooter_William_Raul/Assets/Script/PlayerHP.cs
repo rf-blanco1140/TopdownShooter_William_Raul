@@ -1,16 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHP : MonoBehaviour
 {
     [SerializeField] private int _currentHP = 3;
     [SerializeField] private int _maxHP = 3;
     private PlayerDeath _playerDeathRef;
+    public Text healthText;
+    public int health;
 
     private void Start()
     {
         _playerDeathRef = GetComponent<PlayerDeath>();
+    }
+
+    private void Update()
+    {
+        health = _currentHP;
+        healthText.text = health.ToString();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
