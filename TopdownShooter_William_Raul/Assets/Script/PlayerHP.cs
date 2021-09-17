@@ -9,7 +9,7 @@ public class PlayerHP : MonoBehaviour
     [SerializeField] private int _maxHP = 3;
     private PlayerDeath _playerDeathRef;
     public Text healthText;
-    public int health;
+    private int _health;
 
     private void Start()
     {
@@ -18,8 +18,8 @@ public class PlayerHP : MonoBehaviour
 
     private void Update()
     {
-        health = _currentHP;
-        healthText.text = health.ToString();
+        _health = _currentHP;
+        healthText.text = _health.ToString();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
