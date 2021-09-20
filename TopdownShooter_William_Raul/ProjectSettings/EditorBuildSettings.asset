@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/WillyScene.unity
     guid: 846a9af9d9789a847bd3019dde5477b3
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 4ac855eed185f79449529f246276f91f
+  - enabled: 1
+    path: Assets/Scenes/MainLevelV1.unity
+    guid: 7cdca85c79cd25847be432acab6e1f1d
   m_configObjects: {}
