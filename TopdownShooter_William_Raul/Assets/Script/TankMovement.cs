@@ -18,10 +18,16 @@ public class TankMovement : MonoBehaviour
     public float camShakeMagnitude, camShakeDuration;
     private CameraFollow camShake;
 
+    [SerializeField] private AudioClip _tracksClip;
+    [SerializeField] private AudioSource _audioSource;
+    private float _playSoundTime = 5.0f;
+    private float _currentSoundTime = 5.0f;
+
     // Update is called once per frame
     private void Start()
     {
         camShake = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
+        _audioSource.clip = _tracksClip;
     }
 
     void Update()
@@ -36,14 +42,27 @@ public class TankMovement : MonoBehaviour
 
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
+            _currentSoundTime += Time.deltaTime;
             Instantiate(moveEffect, wheel1.position, Quaternion.identity);
             Instantiate(moveEffect, wheel2.position, Quaternion.identity);
+
+            if(_currentSoundTime >= _playSoundTime)
+            {
+                _audioSource.Play();
+                _currentSoundTime = 0f;
+            }
 
             if (!Input.GetMouseButtonDown(0))
             {
                 StartCoroutine(camShake.Shaking(camShakeDuration, camShakeMagnitude));
             }
 
+        }
+
+        else if(_audioSource.isPlaying)
+        {
+            _audioSource.Stop();
+            _currentSoundTime = 5.0f;
         }
 
         rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
