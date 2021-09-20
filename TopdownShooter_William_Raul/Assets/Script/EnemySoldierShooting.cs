@@ -11,6 +11,9 @@ public class EnemySoldierShooting : MonoBehaviour
     [SerializeField] private float _shootingFrequency;
     [SerializeField] private Animator _animator;
 
+    [SerializeField] private AudioClip _shootingClip;
+    [SerializeField] private AudioSource _audioSource;
+
     private void Start()
     {
         StartCoroutine(ShootingCycle());
@@ -20,6 +23,7 @@ public class EnemySoldierShooting : MonoBehaviour
     {
         StartCoroutine(PlayShootingAnimation());
         Instantiate(_muzzleFlash, _firePoint.position, Quaternion.identity);
+        _audioSource.Play();
         GameObject bullet = Instantiate(_bulletPrefab, _firePoint.position, _firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(_firePoint.up * _bulletForce, ForceMode2D.Impulse);
