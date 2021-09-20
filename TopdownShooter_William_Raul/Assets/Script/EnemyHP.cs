@@ -7,6 +7,7 @@ public class EnemyHP : MonoBehaviour
     [SerializeField] private int _hp;
     private SpriteColor _spriteColorRef;
     [SerializeField] private Animator _animator;
+    public GameObject deathEffect;
 
     private void Start()
     {
@@ -35,6 +36,7 @@ public class EnemyHP : MonoBehaviour
         PlayDeathAnimation();
         //_spriteColorRef.PlaySpriteDamageFlash(); //TODO create separate methods for damage color and for death color
         yield return new WaitForSeconds(0.5f);
+        GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 

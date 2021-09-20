@@ -208,6 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hp: 3
   _animator: {fileID: 7938545187187349791}
+  deathEffect: {fileID: 2826102850231336104, guid: 4f27a8329e3fcb54db7f695d33b85d65, type: 3}
 --- !u!114 &9132310753236772256
 MonoBehaviour:
   m_ObjectHideFlags: 0
