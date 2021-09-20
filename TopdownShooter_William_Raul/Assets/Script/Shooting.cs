@@ -15,10 +15,13 @@ public class Shooting : MonoBehaviour
     public float camShakeMagnitude, camShakeDuration;
 
     private bool _alreadyAttacked;
+    [SerializeField] private AudioClip _shootingClip;
+    [SerializeField] private AudioSource _audioSource;
 
     private void Start()
     {
         _camShake = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
+        _audioSource.clip = _shootingClip;
     }
 
     // Update is called once per frame
@@ -35,6 +38,7 @@ public class Shooting : MonoBehaviour
         if (!_alreadyAttacked)
         {
             Instantiate(muzzleFlash, firePoint.position, Quaternion.identity);
+            _audioSource.Play();
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
