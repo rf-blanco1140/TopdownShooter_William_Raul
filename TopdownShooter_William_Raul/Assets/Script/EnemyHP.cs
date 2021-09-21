@@ -62,7 +62,7 @@ public class EnemyHP : MonoBehaviour
         _audioSource.Play();
         GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
-        yield return new WaitForSeconds(1.1f);
+        //yield return new WaitForSeconds(1.1f);
         Destroy(this.gameObject);
     }
 
