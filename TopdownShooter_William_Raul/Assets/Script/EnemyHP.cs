@@ -9,6 +9,9 @@ public class EnemyHP : MonoBehaviour
     [SerializeField] private Animator _animator;
     public GameObject deathEffect;
 
+    [SerializeField] private AudioClip _explosionClip;
+    [SerializeField] private AudioSource _audioSource;
+
     private void Start()
     {
         _spriteColorRef = GetComponent<SpriteColor>();
@@ -48,10 +51,18 @@ public class EnemyHP : MonoBehaviour
     }
     IEnumerator DeathProcess()
     {
-        PlayDeathAnimation();
+        if(_animator != null)
+        {
+            PlayDeathAnimation();
+        }
         //_spriteColorRef.PlaySpriteDamageFlash(); //TODO create separate methods for damage color and for death color
         yield return new WaitForSeconds(0.5f);
+        _audioSource.clip = _explosionClip;
+        _audioSource.volume = 1f;
+        _audioSource.Play();
         GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(1.1f);
         Destroy(this.gameObject);
     }
 

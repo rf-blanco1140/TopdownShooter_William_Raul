@@ -17,6 +17,7 @@ public class EnemySoldierShooting : MonoBehaviour
     private void Start()
     {
         StartCoroutine(ShootingCycle());
+        _audioSource.clip = _shootingClip;
     }
 
     void Shoot()

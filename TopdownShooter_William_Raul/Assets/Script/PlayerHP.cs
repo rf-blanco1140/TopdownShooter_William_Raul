@@ -41,7 +41,7 @@ public class PlayerHP : MonoBehaviour
     {
         if (!_invulnerable)
         _currentHP--;
-        Debug.Log("HP: "+_currentHP);//ONLY FOR TESTING
+        //Debug.Log("HP: "+_currentHP);//ONLY FOR TESTING
         SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>();
 
         StartCoroutine(DamageSpriteEffect());
