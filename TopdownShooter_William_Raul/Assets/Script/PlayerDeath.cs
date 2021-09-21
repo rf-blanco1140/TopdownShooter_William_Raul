@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
-
+    public GameObject deathEffect;
     private GameManager _gm;
     private SpriteColor _spriteColor;
     private CameraFollow _camShake;
@@ -22,7 +22,9 @@ public class PlayerDeath : MonoBehaviour
 
     public void StartDeathProcess()
     {
+        GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
         StartCoroutine(DeathProcess());
+
     }
 
     IEnumerator DeathProcess()
