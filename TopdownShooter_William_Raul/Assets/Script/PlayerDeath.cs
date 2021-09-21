@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
+
     private GameManager _gm;
     private SpriteColor _spriteColor;
     private CameraFollow _camShake;
@@ -14,8 +15,9 @@ public class PlayerDeath : MonoBehaviour
     {
         _gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         _camShake = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
-        _spriteColor = GetComponent<SpriteColor>();
+        //_spriteColor = GetComponent<SpriteColor>();
         _camShake = GetComponentInChildren<Shooting>().GetCamShake();
+
     }
 
     public void StartDeathProcess()
@@ -26,14 +28,14 @@ public class PlayerDeath : MonoBehaviour
     IEnumerator DeathProcess()
     {
         MakePlayerInvulnerable();
-        _spriteColor.PlaySpriteDamageFlash();
+        //_spriteColor.PlaySpriteDamageFlash();
         StartCoroutine(_camShake.Shaking(_camShakeDuration, _camShakeMagnitude));
         yield return new WaitForSeconds(0.1f);
         _gm.Respawn();
-        _spriteColor.PlayInvulnerabilityFlash();
+        //_spriteColor.PlayInvulnerabilityFlash();
         yield return new WaitForSeconds(1f);
         RestorePlayerVulnerability();
-        _spriteColor.StopInvulnerabilityFlash();
+        //_spriteColor.StopInvulnerabilityFlash();
     }
 
     private void MakePlayerInvulnerable()

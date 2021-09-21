@@ -29,8 +29,23 @@ public class EnemyHP : MonoBehaviour
     private void ReceiveDamage()
     {
         _hp--;
+        StartCoroutine(DamageSpriteEffect());
+
     }
 
+    IEnumerator DamageSpriteEffect()
+    {
+        SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>();
+        for (int i = 0; i < sprites.Length; i++)
+        {
+            sprites[i].color = Color.red;
+        }
+        yield return new WaitForSeconds(1f);
+        for (int i = 0; i < sprites.Length; i++)
+        {
+            sprites[i].color = new Color(1, 1, 1, 1);
+        }
+    }
     IEnumerator DeathProcess()
     {
         PlayDeathAnimation();

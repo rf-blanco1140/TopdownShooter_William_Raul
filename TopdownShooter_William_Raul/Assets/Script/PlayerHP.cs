@@ -10,6 +10,7 @@ public class PlayerHP : MonoBehaviour
     private PlayerDeath _playerDeathRef;
     public Text healthText;
     private int _health;
+    private bool _invulnerable;
 
     private void Start()
     {
@@ -38,11 +39,33 @@ public class PlayerHP : MonoBehaviour
 
     private void ReceiveDamage()
     {
+        if (!_invulnerable)
         _currentHP--;
         Debug.Log("HP: "+_currentHP);//ONLY FOR TESTING
+        SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>();
+
+        StartCoroutine(DamageSpriteEffect());
+
     }
 
-    public void RestoreOneHP()
+    IEnumerator DamageSpriteEffect()
+    {
+        SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>();
+        _invulnerable = true;
+        for (int i = 0; i < sprites.Length; i++)
+        {
+            sprites[i].color = Color.red;
+        }
+        yield return new WaitForSeconds(1f);
+        _invulnerable = false;
+        for (int i = 0; i < sprites.Length; i++)
+        {
+
+            sprites[i].color = new Color(1, 1, 1, 1);
+        }
+    }
+
+        public void RestoreOneHP()
     {
         if(_currentHP<_maxHP)
         {
