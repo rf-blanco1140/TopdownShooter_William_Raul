@@ -37069,6 +37069,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3326691655920832475, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
+      propertyPath: _maxHP
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326691655920832475, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
+      propertyPath: _currentHP
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326691655920832475, guid: 59b93f737302b194a8274acaad8dd381, type: 3}
       propertyPath: healthText
       value: 
       objectReference: {fileID: 826400509}
