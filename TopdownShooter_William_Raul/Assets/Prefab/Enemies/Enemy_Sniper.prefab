@@ -324,6 +324,7 @@ MonoBehaviour:
   deathEffect: {fileID: 2826102850231336104, guid: 4f27a8329e3fcb54db7f695d33b85d65, type: 3}
   _explosionClip: {fileID: 8300000, guid: 0cfbba5e8dcc9d24cb87e4b0faee75ad, type: 3}
   _audioSource: {fileID: 660790601858877766}
+  enemyShooting: {fileID: 6319165835542816167}
 --- !u!1 &5454166768664471357
 GameObject:
   m_ObjectHideFlags: 0

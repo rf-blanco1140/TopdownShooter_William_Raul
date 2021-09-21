@@ -13,7 +13,17 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+
+        if (collision.gameObject.layer != LayerMask.NameToLayer("Bullet"))
+        {
+            GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
+        //    if (!collision.gameObject.CompareTag("PlayerBullet"))
+        //{
+        //    GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+        //    Destroy(gameObject);
+        //}
+
     }
 }
