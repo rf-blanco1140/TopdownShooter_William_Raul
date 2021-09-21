@@ -28,12 +28,23 @@ public class EnemyShooting : MonoBehaviour
         rb.AddForce(_firePoint.up * _bulletForce, ForceMode2D.Impulse);
     }
 
+    public void StopShoot()
+    {
+        StopCoroutine(ShootingCycle());
+    }
+
     IEnumerator ShootingCycle()
     {
         while(true)
         {
             Shoot();
             yield return new WaitForSeconds(_shootingFrequency);
+
+            if (GetComponent<EnemyHP>()._hp <= 0)
+            {
+                StopShoot();
+            }
         }
     }
+
 }
