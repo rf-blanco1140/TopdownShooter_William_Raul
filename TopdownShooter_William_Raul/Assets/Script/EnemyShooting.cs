@@ -37,13 +37,14 @@ public class EnemyShooting : MonoBehaviour
     {
         while(true)
         {
-            Shoot();
-            yield return new WaitForSeconds(_shootingFrequency);
 
             if (GetComponent<EnemyHP>()._hp <= 0)
             {
                 StopShoot();
             }
+            else
+            Shoot();
+            yield return new WaitForSeconds(_shootingFrequency);
         }
     }
 
