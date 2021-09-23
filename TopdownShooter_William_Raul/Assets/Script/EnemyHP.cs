@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHP : MonoBehaviour
 {
-    //I am a monster for this
+    // _hp Was changed from privat to public late into the project, I am a monster.
     public int _hp;
 
     [SerializeField] private Animator _animator;
