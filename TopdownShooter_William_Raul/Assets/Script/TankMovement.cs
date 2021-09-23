@@ -16,7 +16,7 @@ public class TankMovement : MonoBehaviour
     public GameObject moveEffect;
 
     public float camShakeMagnitude, camShakeDuration;
-    private CameraFollow camShake;
+    private CameraFollow _camShake;
 
     [SerializeField] private AudioClip _tracksClip;
     [SerializeField] private AudioSource _audioSource;
@@ -26,7 +26,7 @@ public class TankMovement : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
-        camShake = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
+        _camShake = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
         _audioSource.clip = _tracksClip;
     }
 
@@ -54,7 +54,7 @@ public class TankMovement : MonoBehaviour
 
             if (!Input.GetMouseButtonDown(0))
             {
-                StartCoroutine(camShake.Shaking(camShakeDuration, camShakeMagnitude));
+                StartCoroutine(_camShake.Shaking(camShakeDuration, camShakeMagnitude));
             }
 
         }

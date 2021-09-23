@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EnemyHP : MonoBehaviour
 {
-    //[SerializeField]
+    //I am a monster for this
     public int _hp;
-//    private SpriteColor _spriteColorRef;
+
     [SerializeField] private Animator _animator;
     public GameObject deathEffect;
 
