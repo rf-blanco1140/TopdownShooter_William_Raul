@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1959711327217930249}
   - component: {fileID: 1959711327217930248}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DoorController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 1959711328217271166}
   - component: {fileID: 1959711328217271165}
   - component: {fileID: 1959711328217271164}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
