@@ -34,12 +34,6 @@ public class PauseMenuScript : MonoBehaviour
             ResumeGame();
 
         }
-        if (menuOn)
-        {
-            Cursor.visible = true;
-        }
-        else
-            Cursor.visible = false;
     }
 
     void PauseGame()
@@ -48,7 +42,6 @@ public class PauseMenuScript : MonoBehaviour
         Time.timeScale = 0;
         menuOn = true;
         //Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
         Debug.Log("Escape key was pressed");
     }
 
@@ -57,7 +50,6 @@ public class PauseMenuScript : MonoBehaviour
         _shooting.enabled = true;
         Time.timeScale = 1;
         //Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
         menuOn = false;
         Debug.Log("Escape key was pressed again");
     }
