@@ -23,9 +23,12 @@ public class TankMovement : MonoBehaviour
     private float _playSoundTime = 5.0f;
     private float _currentSoundTime = 5.0f;
 
+    private PauseMenuScript _pauseMenu;
+
     // Update is called once per frame
     private void Start()
     {
+        _pauseMenu = FindObjectOfType<PauseMenuScript>();
         _camShake = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
         _audioSource.clip = _tracksClip;
     }
@@ -59,7 +62,7 @@ public class TankMovement : MonoBehaviour
 
         }
 
-        else if(_audioSource.isPlaying)
+        else if(_audioSource.isPlaying || !_pauseMenu.menuOn)
         {
             _audioSource.Stop();
             _currentSoundTime = 5.0f;
