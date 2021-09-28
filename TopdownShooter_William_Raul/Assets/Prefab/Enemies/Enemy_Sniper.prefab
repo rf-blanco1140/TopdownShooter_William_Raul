@@ -280,7 +280,7 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 634317247259227183, guid: c4dbac89dc6e99d4f9fe5dcd96bf9bc3, type: 3}
   _muzzleFlash: {fileID: 2826102850231336104, guid: d72c5b02db2f54a44aa3c477718925fe, type: 3}
   _bulletForce: 20
-  _shootingFrequency: 0.7
+  _shootingFrequency: 1
   _shootingClip: {fileID: 8300000, guid: 461071048ad53b541ad285238702f2ee, type: 3}
   _audioSource: {fileID: 660790601858877766}
 --- !u!114 &3922416674934810680
@@ -324,7 +324,6 @@ MonoBehaviour:
   deathEffect: {fileID: 2826102850231336104, guid: 4f27a8329e3fcb54db7f695d33b85d65, type: 3}
   _explosionClip: {fileID: 8300000, guid: 0cfbba5e8dcc9d24cb87e4b0faee75ad, type: 3}
   _audioSource: {fileID: 660790601858877766}
-  enemyShooting: {fileID: 6319165835542816167}
 --- !u!1 &5454166768664471357
 GameObject:
   m_ObjectHideFlags: 0
