@@ -280,7 +280,7 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 634317247259227183, guid: c4dbac89dc6e99d4f9fe5dcd96bf9bc3, type: 3}
   _muzzleFlash: {fileID: 2826102850231336104, guid: d72c5b02db2f54a44aa3c477718925fe, type: 3}
   _bulletForce: 20
-  _shootingFrequency: 1
+  _shootingFrequency: 1.2
   _shootingClip: {fileID: 8300000, guid: 461071048ad53b541ad285238702f2ee, type: 3}
   _audioSource: {fileID: 660790601858877766}
 --- !u!114 &3922416674934810680
