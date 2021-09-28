@@ -7,20 +7,13 @@ public class PlayerHP : MonoBehaviour
 {
     [SerializeField] private int _currentHP = 3;
     [SerializeField] private int _maxHP = 3;
+    [SerializeField] private PlayerHpUi _hpUI;
     private PlayerDeath _playerDeathRef;
-    public Text healthText;
-    private int _health;
     private bool _invulnerable;
 
     private void Start()
     {
         _playerDeathRef = GetComponent<PlayerDeath>();
-    }
-
-    private void Update()
-    {
-        _health = _currentHP;
-        healthText.text = _health.ToString();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -32,7 +25,7 @@ public class PlayerHP : MonoBehaviour
             {
                 _playerDeathRef.StartDeathProcess();
                 _currentHP = 3;
-                Debug.Log("HP: " + _currentHP);//ONLY FOR TESTING
+                _hpUI.RecoverAllHearts();
             }
         }
     }
@@ -46,6 +39,7 @@ public class PlayerHP : MonoBehaviour
 
         StartCoroutine(DamageSpriteEffect());
 
+        _hpUI.RemoveHeart(_currentHP);
     }
 
     IEnumerator DamageSpriteEffect()
@@ -70,7 +64,7 @@ public class PlayerHP : MonoBehaviour
         if(_currentHP<_maxHP)
         {
             _currentHP++;
-            Debug.Log("HP: " + _currentHP);//ONLY FOR TESTING
+            _hpUI.AddHeart(_currentHP);
         }
     }
 }
