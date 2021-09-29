@@ -7,7 +7,7 @@ public class CrossHairScript : MonoBehaviour
 {
     public void Start()
     {
-        Cursor.visible = false;
+        //Cursor.visible = false;
     }
 
 

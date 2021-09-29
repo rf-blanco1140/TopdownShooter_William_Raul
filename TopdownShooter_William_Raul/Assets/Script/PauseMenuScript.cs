@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PauseMenuScript : MonoBehaviour
 {
     //Menu
     public GameObject mainMenu;
+    public Image crossHair;
     public bool menuOn;
 
     private Shooting _shooting;
@@ -38,6 +40,7 @@ public class PauseMenuScript : MonoBehaviour
 
     void PauseGame()
     {
+        crossHair.enabled = false;
         _shooting.enabled = false;
         Time.timeScale = 0;
         menuOn = true;
@@ -47,6 +50,7 @@ public class PauseMenuScript : MonoBehaviour
 
     public void ResumeGame()
     {
+        crossHair.enabled = true;
         _shooting.enabled = true;
         Time.timeScale = 1;
         //Cursor.visible = false;
