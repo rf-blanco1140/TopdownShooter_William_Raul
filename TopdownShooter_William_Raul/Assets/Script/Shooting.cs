@@ -16,6 +16,7 @@ public class Shooting : MonoBehaviour
 
     private bool _alreadyAttacked;
     [SerializeField] private AudioClip _shootingClip;
+    [SerializeField] private AudioClip _loadedGunClip;
     [SerializeField] private AudioSource _audioSource;
 
     private void Start()
@@ -37,6 +38,7 @@ public class Shooting : MonoBehaviour
     {
         if (!_alreadyAttacked)
         {
+            _audioSource.clip = _shootingClip;
             Instantiate(muzzleFlash, firePoint.position, Quaternion.identity);
             _audioSource.Play();
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
@@ -54,6 +56,9 @@ public class Shooting : MonoBehaviour
     private void ResetShoot()
     {
         _alreadyAttacked = false;
+
+        _audioSource.clip = _loadedGunClip;
+        _audioSource.Play();
     }
 
     public CameraFollow GetCamShake()
