@@ -29,13 +29,17 @@ public class PlayerHP : MonoBehaviour
                 _currentHP = 3;
                 _hpUI.RecoverAllHearts();
             }
-            if (_currentHP <= 1)
-            {
-                _damageParticles.SetActive(true);
-            }
-            else
-                _damageParticles.SetActive(false);
         }
+    }
+
+    private void Update()
+    {
+        if (_currentHP <= 1)
+        {
+            _damageParticles.SetActive(true);
+        }
+        else
+            _damageParticles.SetActive(false);
     }
 
     private void ReceiveDamage()
