@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] private GameObject _soundToggleBtn;
     private Text _btnText;
     private bool _isOn;
+    [SerializeField] private AudioMixer _audioMixer;
 
     private void Start()
     {
