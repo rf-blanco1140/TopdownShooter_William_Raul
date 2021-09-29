@@ -11,7 +11,7 @@ public class Shooting : MonoBehaviour
     public GameObject muzzleFlash;
 
     public float bulletForce = 20f;
-    public float shootCooldown = 1f;
+    public float shootCooldown;
     public float camShakeMagnitude, camShakeDuration;
 
     private bool _alreadyAttacked;
