@@ -6,29 +6,54 @@ using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField] private GameObject _soundToggleBtn;
-    private Text _btnText;
-    private bool _isOn;
+    [SerializeField] private GameObject _musicToggleBtn;
+    [SerializeField] private GameObject _sfxToggleBtn;
+    private Text _musciBtnText;
+    private Text _sfxBtnText;
+    private bool _musicIsOn;
+    private bool _sfxIsOn;
     [SerializeField] private AudioMixer _audioMixer;
 
     private void Start()
     {
-        _btnText = _soundToggleBtn.GetComponentInChildren<Text>();
-        _btnText.text = "ON";
-        _isOn = true;
+        _musciBtnText = _musicToggleBtn.GetComponentInChildren<Text>();
+        _musciBtnText.text = "ON";
+        _sfxBtnText = _sfxToggleBtn.GetComponentInChildren<Text>();
+        _sfxBtnText.text = "ON";
+        _musicIsOn = true;
+        _sfxIsOn = true;
     }
 
-    public void ToggleOnOff()
+    public void ToggleMusicOnOff()
     {
-        switch(_isOn)
+        switch(_musicIsOn)
         {
             case true:
-                _isOn = false;
-                _btnText.text = "OFF";
+                _musicIsOn = false;
+                _musciBtnText.text = "OFF";
+                _audioMixer.SetFloat("musicVol", -80.0f);
                 break;
             case false:
-                _isOn = true;
-                _btnText.text = "ON";
+                _musicIsOn = true;
+                _musciBtnText.text = "ON";
+                _audioMixer.SetFloat("musicVol", 0f);
+                break;
+        }
+    }
+
+    public void ToggleSfxOnOff()
+    {
+        switch (_sfxIsOn)
+        {
+            case true:
+                _sfxIsOn = false;
+                _sfxBtnText.text = "OFF";
+                _audioMixer.SetFloat("sfxVol",-80f);
+                break;
+            case false:
+                _sfxIsOn = true;
+                _sfxBtnText.text = "ON";
+                _audioMixer.SetFloat("sfxVol", 0f);
                 break;
         }
     }
