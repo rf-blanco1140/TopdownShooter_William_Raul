@@ -49,7 +49,7 @@ public class Shooting : MonoBehaviour
             StartCoroutine(_camShake.Shaking(camShakeDuration, camShakeMagnitude));
 
             _alreadyAttacked = true;
-            Invoke(nameof(ResetShootReload), shootCooldown);
+            Invoke(nameof(ResetShootReload), shootCooldown/2);
         }
     }
 
@@ -57,7 +57,7 @@ public class Shooting : MonoBehaviour
     {
         _audioSource.clip = _loadedGunClip;
         _audioSource.Play();
-        Invoke(nameof(ResetShoot), shootCooldown);
+        Invoke(nameof(ResetShoot), shootCooldown/2);
     }
 
     private void ResetShoot()
