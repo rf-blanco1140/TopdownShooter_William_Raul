@@ -8,8 +8,10 @@ public class PlayerHP : MonoBehaviour
     [SerializeField] private int _currentHP = 3;
     [SerializeField] private int _maxHP = 3;
     [SerializeField] private PlayerHpUi _hpUI;
+    [SerializeField] private GameObject _damageParticles;
     private PlayerDeath _playerDeathRef;
     private bool _invulnerable;
+
 
     private void Start()
     {
@@ -27,6 +29,12 @@ public class PlayerHP : MonoBehaviour
                 _currentHP = 3;
                 _hpUI.RecoverAllHearts();
             }
+            if (_currentHP <= 1)
+            {
+                _damageParticles.SetActive(true);
+            }
+            else
+                _damageParticles.SetActive(false);
         }
     }
 
