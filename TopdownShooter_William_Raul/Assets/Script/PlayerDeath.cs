@@ -36,7 +36,7 @@ public class PlayerDeath : MonoBehaviour
 
     private void MakePlayerInvulnerable()
     {
-        GetComponent<BoxCollider2D>().enabled = false;
+        //GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         GetComponent<Rigidbody2D>().freezeRotation = true;
     }
@@ -44,6 +44,6 @@ public class PlayerDeath : MonoBehaviour
     private void RestorePlayerVulnerability()
     {
 
-        GetComponent<BoxCollider2D>().enabled = true;
+        //GetComponent<BoxCollider2D>().enabled = true;
     }
 }
