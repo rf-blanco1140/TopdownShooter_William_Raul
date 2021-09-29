@@ -22,10 +22,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetButtonDown("Jump"))
-        {
-            Respawn();
-        }
+        
     }
 
     public void Respawn()
