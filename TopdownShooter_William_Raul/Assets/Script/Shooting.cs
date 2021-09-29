@@ -39,8 +39,8 @@ public class Shooting : MonoBehaviour
         if (!_alreadyAttacked)
         {
             _audioSource.clip = _shootingClip;
-            Instantiate(muzzleFlash, firePoint.position, Quaternion.identity);
             _audioSource.Play();
+            Instantiate(muzzleFlash, firePoint.position, Quaternion.identity);
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
@@ -49,16 +49,21 @@ public class Shooting : MonoBehaviour
             StartCoroutine(_camShake.Shaking(camShakeDuration, camShakeMagnitude));
 
             _alreadyAttacked = true;
-            Invoke(nameof(ResetShoot), shootCooldown);
+            Invoke(nameof(ResetShootReload), shootCooldown);
         }
+    }
+
+    private void ResetShootReload()
+    {
+        _audioSource.clip = _loadedGunClip;
+        _audioSource.Play();
+        Invoke(nameof(ResetShoot), shootCooldown);
     }
 
     private void ResetShoot()
     {
         _alreadyAttacked = false;
 
-        _audioSource.clip = _loadedGunClip;
-        _audioSource.Play();
     }
 
     public CameraFollow GetCamShake()
