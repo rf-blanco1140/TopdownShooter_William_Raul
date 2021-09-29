@@ -320,7 +320,7 @@ MonoBehaviour:
   camShakeMagnitude: 0.3
   camShakeDuration: 0.1
   _shootingClip: {fileID: 8300000, guid: 7dce5778104ffdd4abfb5844657a177e, type: 3}
-  _loadedGunClip: {fileID: 8300000, guid: 48499dfbb2e8e434aa973d773278f529, type: 3}
+  _loadedGunClip: {fileID: 8300000, guid: aef30a77a0772c945b4af4beaf132aa1, type: 3}
   _audioSource: {fileID: 2062213204}
 --- !u!82 &2062213204
 AudioSource:
